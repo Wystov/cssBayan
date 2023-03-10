@@ -11,10 +11,11 @@
     align-items: center;
     flex-wrap: wrap;
     border-top: 2px solid gray;
+    margin: 0.5rem 0;
 }
 
-.row_title,
-.row_icon {
+.row_title {
+    width: 80%;
     font-size: 1.5rem;
     font-weight: bold;
     margin: .5rem 0;
@@ -31,10 +32,42 @@
     width: 70%;
     padding-bottom: 0;
     margin: auto;
-    background-image: url('assets/memes/meme-1.png');
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     transition: .3s;
+}
+
+.meme-1 {
+    background-image: url('assets/memes/meme-1.png');
+}
+
+.meme-2 {
+    background-image: url('assets/memes/meme-2.png');
+}
+
+.meme-3 {
+    background-image: url('assets/memes/meme-3.png');
+}
+
+.meme-4 {
+    background-image: url('assets/memes/meme-4.png');
+}
+
+.meme-5 {
+    background-image: url('assets/memes/meme-5.png');
+}
+
+.meme-6 {
+    background-image: url('assets/memes/meme-6.png');
+}
+
+.meme-7 {
+    background-image: url('assets/memes/meme-7.png');
+}
+
+.meme-8 {
+    background-image: url('assets/memes/meme-8.png');
 }
 
 .bayan_check {
@@ -48,4 +81,8 @@
 .bayan_check:checked~.row_img {
     padding-bottom: 70%;
     transition: .3s;
+}
+
+.bayan_check:checked~.row_title {
+    color: blue;
 }
