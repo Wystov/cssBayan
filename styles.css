@@ -30,6 +30,7 @@
     width: 1.5rem;
     background-image: url('assets/icons/plus.svg');
     background-size: cover;
+    transition: .3s;
 }
 
 .row_img {
@@ -79,7 +80,7 @@
 }
 
 .bayan_check:checked~.row_icon {
-    background-image: url('assets/icons/x.svg');
+    transform: rotate(45deg);
 }
 
 .bayan_check:checked~.row_img {
@@ -112,30 +113,40 @@
     .bayan_check:checked~.row_img {
         padding-bottom: 50%;
     }
+}
 
-    @media (min-width: 900px) {
-        .wrapper {
-            width: 60vw;
-        }
+@media (min-width: 900px) {
+    .wrapper {
+        width: 60vw;
+    }
 
-        .title {
-            font-size: 3rem;
-        }
+    .title {
+        font-size: 3rem;
+    }
 
-        .row_title {
-            font-size: 2.5rem;
-        }
+    .row_title {
+        font-size: 2.5rem;
+    }
 
-        .row_icon {
-            height: 2.5rem;
-            width: 2.5rem;
-        }
+    .row_icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        opacity: 0;
+    }
 
-        .row_img {
-            width: 40%;
-        }
+    .bayan:hover .bayan_check~.row_icon {
+        opacity: 1;
+    }
 
-        .bayan_check:checked~.row_img {
-            padding-bottom: 40%;
+    .bayan_check:checked~.row_img {
+        padding-bottom: 40%;
+    }
 
-        }
+    .bayan_check:hover~.row_img {
+        padding-bottom: 40%;
+    }
+
+    .bayan_check:hover~.row_icon {
+        transform: rotate(45deg);
+    }
+}
