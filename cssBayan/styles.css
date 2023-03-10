@@ -14,8 +14,9 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    border-top: 2px solid gray;
+    border-top: 0.2rem solid gray;
     margin: 0.5rem 0;
+    color: blue;
 }
 
 .row_title {
@@ -29,7 +30,7 @@
     height: 1.5rem;
     width: 1.5rem;
     background-image: url('assets/icons/plus.svg');
-    background-size: cover;
+    background-size: 100%;
     transition: .3s;
 }
 
@@ -89,6 +90,14 @@
 }
 
 .bayan_check:checked~.row_title {
+    color: black;
+}
+
+.bayan_row:active .row_icon {
+    background-image: url('assets/icons/plus-active.svg');
+}
+
+.bayan_row:active .row_title {
     color: blue;
 }
 
@@ -105,19 +114,11 @@
         height: 2rem;
         width: 2rem;
     }
-
-    .row_img {
-        width: 50%;
-    }
-
-    .bayan_check:checked~.row_img {
-        padding-bottom: 50%;
-    }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
     .wrapper {
-        width: 60vw;
+        width: 80vw;
     }
 
     .title {
@@ -131,6 +132,38 @@
     .row_icon {
         height: 2.5rem;
         width: 2.5rem;
+    }
+
+    .row_img {
+        width: 50%;
+    }
+
+    .bayan_check:checked~.row_img {
+        padding-bottom: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        width: 60vw;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .bayan:hover * {
+        cursor: pointer;
+        color: black;
+    }
+
+    .row_title {
+        font-size: 3rem;
+    }
+
+    .row_icon {
+        height: 3rem;
+        width: 3rem;
         opacity: 0;
     }
 
@@ -149,4 +182,6 @@
     .bayan_check:hover~.row_icon {
         transform: rotate(45deg);
     }
+
+
 }
