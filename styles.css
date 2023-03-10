@@ -3,6 +3,10 @@
     margin: auto;
 }
 
+.title {
+    font-size: 2rem;
+}
+
 .bayan_row {
     display: block;
     width: 100%;
@@ -86,3 +90,52 @@
 .bayan_check:checked~.row_title {
     color: blue;
 }
+
+@media (min-width: 500px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .row_title {
+        font-size: 2rem;
+    }
+
+    .row_icon {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .row_img {
+        width: 50%;
+    }
+
+    .bayan_check:checked~.row_img {
+        padding-bottom: 50%;
+    }
+
+    @media (min-width: 900px) {
+        .wrapper {
+            width: 60vw;
+        }
+
+        .title {
+            font-size: 3rem;
+        }
+
+        .row_title {
+            font-size: 2.5rem;
+        }
+
+        .row_icon {
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+
+        .row_img {
+            width: 40%;
+        }
+
+        .bayan_check:checked~.row_img {
+            padding-bottom: 40%;
+
+        }
