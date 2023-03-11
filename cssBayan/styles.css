@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 body {
+    margin: 0;
     background-color: rgb(249, 245, 240);
     font-family: roboto, sans-serif;
 }
@@ -118,6 +119,46 @@ body {
     color: blue;
 }
 
+@media (hover: hover) {
+    body {
+        overflow-y: scroll;
+    }
+
+    .bayan:hover * {
+        cursor: pointer;
+        color: black;
+    }
+
+    .row_icon {
+        background-image: url('assets/icons/plus.svg');
+        opacity: 0;
+    }
+
+    .bayan:hover .bayan_check~.row_icon {
+        opacity: 1;
+    }
+
+    .bayan_check:hover~.row_img {
+        padding-bottom: 70%;
+    }
+
+    .bayan_check:hover~.row_icon {
+        transform: rotate(45deg);
+    }
+}
+
+@media (hover: hover) and ((min-width: 1000px)) {
+    .bayan_check:hover~.row_img {
+        padding-bottom: 50%;
+    }
+}
+
+@media (hover: hover) and ((min-width: 1200px)) {
+    .bayan_check:hover~.row_img {
+        padding-bottom: 40%;
+    }
+}
+
 @media (min-width: 500px) {
     .title {
         font-size: 2.5rem;
@@ -169,37 +210,16 @@ body {
         font-size: 3.5rem;
     }
 
-    .bayan:hover * {
-        cursor: pointer;
-        color: black;
-    }
-
     .row_title {
         font-size: 2.7rem;
     }
 
     .row_icon {
-        background-image: url('assets/icons/plus.svg');
         height: 3rem;
         width: 3rem;
-        opacity: 0;
-    }
-
-    .bayan:hover .bayan_check~.row_icon {
-        opacity: 1;
     }
 
     .bayan_check:checked~.row_img {
         padding-bottom: 40%;
     }
-
-    .bayan_check:hover~.row_img {
-        padding-bottom: 40%;
-    }
-
-    .bayan_check:hover~.row_icon {
-        transform: rotate(45deg);
-    }
-
-
 }
