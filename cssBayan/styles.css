@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    margin: 0;
+    background-color: rgb(249, 245, 240);
+    font-family: roboto, sans-serif;
+}
+
+.wrapper {
+    width: 90vw;
+    margin: auto;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.bayan_row {
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
+    color: blue;
+}
+
+.separator {
+    width: 100%;
+    height: 0.1rem;
+    background-color: rgb(178, 178, 178);
+}
+
+.row_title {
+    width: 80%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: .5rem 0;
+}
+
+.row_icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-image: url('assets/icons/plus-active.svg');
+    background-size: 100%;
+    transition: .3s;
+}
+
+.row_img {
+    width: 70%;
+    padding-bottom: 0;
+    margin: auto;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: .3s;
+}
+
+.meme-1 {
+    background-image: url('assets/memes/meme-1.png');
+}
+
+.meme-2 {
+    background-image: url('assets/memes/meme-2.png');
+}
+
+.meme-3 {
+    background-image: url('assets/memes/meme-3.png');
+}
+
+.meme-4 {
+    background-image: url('assets/memes/meme-4.png');
+}
+
+.meme-5 {
+    background-image: url('assets/memes/meme-5.png');
+}
+
+.meme-6 {
+    background-image: url('assets/memes/meme-6.png');
+}
+
+.meme-7 {
+    background-image: url('assets/memes/meme-7.png');
+}
+
+.meme-8 {
+    background-image: url('assets/memes/meme-8.png');
+}
+
+.bayan_check {
+    display: none;
+}
+
+.bayan_check:checked~.row_icon {
+    background-image: url('assets/icons/plus.svg');
+    transform: rotate(45deg);
+}
+
+.bayan_check:checked~.row_img {
+    padding-bottom: 70%;
+    transition: .3s;
+}
+
+.bayan_check:checked~.row_title {
+    color: black;
+}
+
+.bayan_row:active {
+    opacity: 0.7;
+}
+
+.bayan_row:active .row_icon {
+    background-image: url('assets/icons/plus-active.svg');
+}
+
+.bayan_row:active .row_title {
+    color: blue;
+}
+
+@media (hover: hover) {
+    body {
+        overflow-y: scroll;
+    }
+
+    .bayan:hover * {
+        cursor: pointer;
+        color: black;
+    }
+
+    .row_icon {
+        background-image: url('assets/icons/plus.svg');
+        opacity: 0;
+    }
+
+    .bayan:hover .bayan_check~.row_icon {
+        opacity: 1;
+    }
+
+    .bayan_check:hover~.row_img {
+        padding-bottom: 70%;
+    }
+
+    .bayan_check:hover~.row_icon {
+        transform: rotate(45deg);
+    }
+}
+
+@media (hover: hover) and ((min-width: 1000px)) {
+    .bayan_check:hover~.row_img {
+        padding-bottom: 50%;
+    }
+}
+
+@media (hover: hover) and ((min-width: 1200px)) {
+    .bayan_check:hover~.row_img {
+        padding-bottom: 40%;
+    }
+}
+
+@media (min-width: 500px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .row_title {
+        font-size: 1.7rem;
+    }
+
+    .row_icon {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .wrapper {
+        width: 80vw;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .row_title {
+        font-size: 2.2rem;
+    }
+
+    .row_icon {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .row_img {
+        width: 50%;
+    }
+
+    .bayan_check:checked~.row_img {
+        padding-bottom: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        width: 60vw;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .row_title {
+        font-size: 2.7rem;
+    }
+
+    .row_icon {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .bayan_check:checked~.row_img {
+        padding-bottom: 40%;
+    }
+}
