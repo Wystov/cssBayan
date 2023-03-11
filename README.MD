@@ -1,5 +1,7 @@
 # CSS accordion
 
+[DEPLOY](https://wystov.github.io/cssBayan/cssBayan/index.html)
+
 ## Overview
 
 Implementation of a CSS-only accordion. It's designed to be fully responsive and interactive, without the use of JavaScript or CSS frameworks.
